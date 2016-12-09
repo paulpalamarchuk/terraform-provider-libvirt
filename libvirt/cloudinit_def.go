@@ -28,6 +28,7 @@ type defCloudInit struct {
 	Metadata struct {
 		LocalHostname string `yaml:"local-hostname,omitempty"`
 		InstanceID    string `yaml:"instance-id"`
+                NetworkInterfaces string `yaml:"network-interfaces"`
 	}
 	UserData struct {
 		SSHAuthorizedKeys []string `yaml:"ssh_authorized_keys"`
