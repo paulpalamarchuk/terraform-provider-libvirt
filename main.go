@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/dmacvicar/terraform-provider-libvirt/libvirt"
+	"github.com/paulpalamarchuk/terraform-provider-libvirt/libvirt"
 	"github.com/hashicorp/terraform/plugin"
 )
 
