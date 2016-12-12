@@ -52,8 +52,8 @@ func resourceCloudInitCreate(d *schema.ResourceData, meta interface{}) error {
 	cloudInit := newCloudInitDef()
 	cloudInit.Metadata.LocalHostname = d.Get("local_hostname").(string)
         cloudInit.Metadata.NetworkInterfaces = d.Get("network_interfaces").(string)
-	
-        if _, ok := d.GetOk("ssh_authorized_key"); ok {
+
+	if _, ok := d.GetOk("ssh_authorized_key"); ok {
 		sshKey := d.Get("ssh_authorized_key").(string)
 		cloudInit.UserData.SSHAuthorizedKeys = append(
 			cloudInit.UserData.SSHAuthorizedKeys,
